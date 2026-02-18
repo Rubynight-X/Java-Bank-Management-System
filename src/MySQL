@@ -1,0 +1,63 @@
+CREATE DATABASE bankmanagementsystem;
+
+SHOW DATABASES;
+
+USE bankmanagementsystem;
+
+CREATE TABLE signup (
+	formNumber VARCHAR(4), 
+    person_name VARCHAR(20), 
+    dob VARCHAR(20), 
+    gender VARCHAR(20), 
+    email VARCHAR(30), 
+    marital_status VARCHAR(20), 
+    address VARCHAR(40), 
+    province VARCHAR(25), 
+    postal_code VARCHAR(20)
+);
+
+CREATE TABLE signuptwo (
+	formNumber VARCHAR(4),
+    income VARCHAR(20),
+    education VARCHAR(30),
+    occupation VARCHAR(20),
+    legal_status VARCHAR(20),
+    existingAccount VARCHAR(10)
+);
+
+CREATE TABLE signupthree (
+	formNumber VARCHAR(4),
+    accountType VARCHAR(30),
+    cardNumber VARCHAR(16),
+    pinNumber VARCHAR(4),
+    facility VARCHAR(60)
+);
+
+CREATE TABLE login (
+	formNumber VARCHAR(4),
+    cardNumber VARCHAR(16),
+    pin VARCHAR(4)
+);
+
+CREATE TABLE bank (
+    cardNumber VARCHAR(16),
+    date VARCHAR(50),
+    type VARCHAR(20),
+    amount VARCHAR(20)
+);
+
+
+SHOW TABLES;
+
+SELECT * FROM signup;
+SELECT * FROM signuptwo;
+SELECT * FROM signupthree;
+SELECT * FROM login;
+SELECT * FROM bank;
+
+SET SQL_SAFE_UPDATES = 0;
+DELETE FROM signup;
+DELETE FROM signuptwo;
+DELETE FROM signupthree;
+DELETE FROM login;
+DELETE FROM bank;
